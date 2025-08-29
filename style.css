@@ -193,6 +193,42 @@ body.esterillas .btn:hover {
   color: #ff5555;
   transform: scale(1.2);
 }
+/* Estilo general para botones flotantes */
+.btn-flotante {
+  position: fixed;
+  bottom: 20px;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 4px 6px rgba(0,0,0,0.3);
+  transition: transform 0.2s ease-in-out;
+  z-index: 1000;
+}
+
+.btn-flotante img {
+  width: 30px;
+  height: 30px;
+}
+
+/* Botón WhatsApp */
+.btn-flotante.whatsapp {
+  right: 90px;
+  background-color: #25D366;
+}
+
+/* Botón Instagram */
+.btn-flotante.instagram {
+  right: 20px;
+  background: linear-gradient(45deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
+}
+
+/* Animación hover */
+.btn-flotante:hover {
+  transform: scale(1.1);
+}
 
 
 /* RESPONSIVE */
@@ -208,6 +244,37 @@ body.esterillas .btn:hover {
   }
   nav .nav-links.active {
     display: flex;
+  }
+  nav .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  nav .nav-links.active {
+    display: flex;
+    gap: 15px; /* más espacio entre botones */
+  }
+
+  nav .nav-links li {
+    width: 100%;
+  }
+
+  nav .nav-links li a {
+    display: block;
+    width: 100%;
+    padding: 12px 20px;
+    text-align: left;
+    border-radius: 10px;
+    background: rgba(255,255,255,0.2);
+    color: inherit;
+    transition: background 0.3s, transform 0.2s;
+  }
+
+  nav .nav-links li a:hover {
+    background: rgba(255,255,255,0.35);
+    transform: scale(1.05);
   }
   .menu-toggle {
     display: block;
