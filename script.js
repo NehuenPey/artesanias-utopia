@@ -19,7 +19,6 @@ function closeModal() {
 document.addEventListener("keydown", (e) => {
   if (e.key === "Escape") {
     closeModal();
-    closeCart();
   }
 });
 
@@ -42,3 +41,28 @@ toggle.addEventListener("click", () => {
     ? "&times;"
     : "&#9776;";
 });
+
+/* ===================== */
+/*   CARRUSEL DE IMÁGENES  */
+/* ===================== */
+
+// Inicializar todos los carruseles
+document.querySelectorAll(".carousel").forEach(carousel => {
+  const imgs = carousel.querySelectorAll(".carousel-img");
+  imgs[0].classList.add("active"); // mostrar la primera imagen
+});
+
+// Función para cambiar imagen
+function changeSlide(button, direction) {
+  const carousel = button.parentElement;
+  const imgs = carousel.querySelectorAll(".carousel-img");
+  let currentIndex = Array.from(imgs).findIndex(img => img.classList.contains("active"));
+  
+  imgs[currentIndex].classList.remove("active");
+  let nextIndex = currentIndex + direction;
+
+  if (nextIndex < 0) nextIndex = imgs.length - 1;
+  if (nextIndex >= imgs.length) nextIndex = 0;
+
+  imgs[nextIndex].classList.add("active");
+}
