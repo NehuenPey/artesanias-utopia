@@ -16,6 +16,7 @@
       <li><a href="index.html">Pulseras y Lapiceras</a></li>
       <li><a href="alfombras.html">Alfombras</a></li>
       <!-- <li><a href="esterillas.html">Esterillas</a></li> -->
+       <li><a href="llaveros.html">Llaveros</a></li>
     </ul>
   </nav>
 
@@ -68,21 +69,21 @@
       </div>
       <div class="card">
         <img src="img/Basico.jpg" alt="Alfombra estilo tufting" onclick="openModal(this)">
-        <h3>Alfombra Tufting</h3>
+        <h3>Alfombra blanco y negro</h3>
       </div>
       <div class="card">
         <img src="img/Kiki.jpg" alt="Alfombra estilo tufting" onclick="openModal(this)">
-        <h3>Alfombra Tufting</h3>
+        <h3>Alfombra verde y rosa</h3>
       </div>
     </div>
     <!-- Botón flotante WhatsApp -->
-    <a href="https://wa.me/5493412135788?text=Hola! Me interesa:"  class="btn-flotante whatsapp"
-      target="_blank">
+    <a href="https://wa.me/5493412135788?text=Hola! Me interesa:" class="btn-flotante whatsapp" target="_blank">
       <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
     </a>
 
     <!-- Botón flotante Instagram -->
-    <a href="https://www.instagram.com/alfombras_y_tapiz_utopia?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="btn-flotante instagram" target="_blank">
+    <a href="https://www.instagram.com/alfombras_y_tapiz_utopia?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+      class="btn-flotante instagram" target="_blank">
       <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
     </a>
 
@@ -92,7 +93,18 @@
     <span class="close-btn" onclick="closeModal()">&times;</span>
     <img id="modal-img" src="" alt="Producto">
   </div>
-
+  <!-- Modal de consultas -->
+  <div id="cart-modal" class="modal">
+    <div class="modal-content consultas">
+      <span class="close-btn" onclick="closeCart()">&times;</span>
+      <h2>Consulta de productos</h2>
+      <p class="subtext">Seleccionaste los siguientes productos para consultar:</p>
+      <ul id="cart-items"></ul>
+      <div class="cart-footer">
+        <button onclick="sendWhatsApp()" class="btn-confirmar">Enviar consulta por WhatsApp</button>
+      </div>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>

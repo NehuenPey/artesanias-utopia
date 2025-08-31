@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Esterillas</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="llaveros">
+  <nav>
+    <div class="logo">Artesanías Utopia</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Pulseras y Lapiceras</a></li>
+      <li><a href="alfombras.html">Alfombras</a></li>
+      <!-- <li><a href="esterillas.html">Esterillas</a></li> -->
+      <li><a href="llaveros.html">Llaveros</a></li>
+    </ul>
+  </nav>
+
+  <header>
+    <h1>Llaveros</h1>
+    <p>Explorá nuestros llaveros artesales y personalizables</p>
+  </header>
+
+  <main>
+    <div class="grid">
+      <div class="card">
+        <img src="tilla.jpg" alt="Llavero" onclick="openModal(this)">
+        <h3>Llavero</h3>
+      </div>
+    </div>
+    <!-- Botón flotante WhatsApp -->
+    <a href="https://wa.me/5493412135788?text=Hola! Me interesa:"  class="btn-flotante whatsapp"
+      target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+    </a>
+
+    <!-- Botón flotante Instagram -->
+    <a href="https://www.instagram.com/alfombras_y_tapiz_utopia?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="btn-flotante instagram" target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
+    </a>
+
+  </main>
+
+  <div id="modal" class="modal">
+    <span class="close-btn" onclick="closeModal()">&times;</span>
+    <img id="modal-img" src="" alt="Producto">
+  </div>
+
+
+  <script src="script.js"></script>
+</body>
+
+</html>
